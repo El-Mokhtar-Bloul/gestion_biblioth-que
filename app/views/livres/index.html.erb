@@ -1,0 +1,26 @@
+<h1>Mes livres</h1>
+<div id="livres">
+	<table class="table table-striped">
+		<tr>
+		<td>Nom</td>
+		<td>Nb_pages</td>
+		<td>Auteur</td>
+	</tr>
+
+<% @livres.each do |livre| %>
+<tr>
+<td><%= livre.nom%></td>
+<td><%= livre.nombre_de_page%></td>
+<td><%= livre.auteur%></td>
+<td><%= link_to "voir le livre", livre_path(livre) %></td>
+<td><%= link_to "Modifier le livre", edit_livre_path(livre) %></td>
+<td><%= link_to "Supprimer le livre", livre_path(livre), method: :delete %></td>
+</tr>
+
+	<% end %>
+</table>
+<br>
+
+<td><%= link_to "Ajouter un nouveau livre", new_livre_path() %></td>
+
+	</div>

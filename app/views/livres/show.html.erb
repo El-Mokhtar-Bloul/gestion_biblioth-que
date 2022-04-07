@@ -1,0 +1,15 @@
+<h3>Nom:<%= @livre.nom %></h3>
+<h3>NB_pages: <%= @livre.nombre_de_page %></h3>
+
+<h3>Auteur :<%= @livre.auteur %></h3>
+
+
+<p>
+	<a href="<%= livres_path%>" class="btn btn-primary">Retour</a>
+</p>
+
+<p>
+  <%= button_to "Supprimer ce livre", @employess, method: :delete %>
+  </p>
+
+

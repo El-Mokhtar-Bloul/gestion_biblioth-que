@@ -1,0 +1,30 @@
+<h2>Modifier le livre</h2>
+
+
+
+
+<%= form_with model: @livre, local:true do |form| %>
+	<p>
+		<%= form.label :nom %>
+		<%= form.text_field :nom %> 
+	</p>
+
+	<p>
+		<%= form.label :Nbr_page %>
+		<%= form.text_field :nombre_de_page %> 
+	</p>
+
+	<p>
+		<%= form.label :Auteur %>
+		<%= form.text_field :auteur%> 
+	</p>
+
+	<p>
+		<%= form.submit "Modifier un livre" %>
+	</p>
+
+<p>
+	<a href="<%= livres_path%>" class="btn btn-primary">Retour</a>
+</p>
+
+	<%end%>
